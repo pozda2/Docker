@@ -45,7 +45,6 @@ networks:
 
 | Příkaz                       | Vysvětlení                                                          |
 |------------------------------|---------------------------------------------------------------------|
-| cd docker-conf               | přepnutí do adresáře docker-conf                                    |
 | docker compose up --build -d | Při změně Dockerfile se spustí build                                |  
 | docker compose up            | Build, vytvoření kontejnerů a jejich spuštění                       |
 | docker compose down          | Vypnutí kontejnerů a jejich smazání (volumes a networks se nemažou) |

@@ -3,9 +3,9 @@ version: "3.8"
 services:
     web:
         container_name: my-hello-world-c3
-        build: ./web
+        build: web
         ports:
             - "8002:80"
         volumes:
             # binding
-            - ../webroot:/var/www/html
+            - ./web/webroot:/var/www/html
