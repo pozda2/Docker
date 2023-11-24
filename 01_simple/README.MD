@@ -69,11 +69,11 @@ si postupně ukážeme.
 
 # První aplikace
 
-| Příkaz                                                              | Vysvětlení                                                                                                                           |
-|---------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| docker build -t my-hello-world .                                    | Vytvořebí image my-hello-world podle Dockerfile                                                                                      |
-| docker image ls                                                     | Vypsání seznamu images                                                                                                               |
-| docker run -d -p 8080:80 --name my-hello-world-app-c my-hello-world | Vytvoření kontejneru z image. Kontejner se spustí a vnitřní port apache 80 je z venku dostupný na 8080. V prohlížeči zadejte adresu http://localhost:8080 |
-| docker ps                                                           | výpis kontejneru |
-| docker stop my-hello-world-app-c                                    | Vypnutí kontejneru |
-| docker rm my-hello-world-app-c | Smazání kontejneru |
+| Příkaz                                                              | Vysvětlení                                                                                                                                                |
+|---------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| docker build -t my-hello-world .                                    | Vytvořebí image my-hello-world podle Dockerfile                                                                                                           |
+| docker image ls                                                     | Vypsání seznamu images                                                                                                                                    |
+| docker run -d -p 8000:80 --name my-hello-world-app-c my-hello-world | Vytvoření kontejneru z image. Kontejner se spustí a vnitřní port apache 80 je z venku dostupný na 8080. V prohlížeči zadejte adresu http://localhost:8000 |
+| docker ps                                                           | výpis kontejneru                                                                                                                                          |
+| docker stop my-hello-world-app-c                                    | Vypnutí kontejneru                                                                                                                                        |
+| docker rm my-hello-world-app-c                                      | Smazání kontejneru                                                                                                                                        |
