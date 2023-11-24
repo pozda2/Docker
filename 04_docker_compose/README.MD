@@ -13,7 +13,7 @@ nemusí fungovat správně.
 
 V této kapitole si pro jednoduchost vytvoříme jedno kontejnerovou aplikaci se statickou stránkou z předchozích kapitol.
 
-## docker-compose.yml
+## docker-compose.yaml
 Syntaxe souboru prochází vývojem a je vhodné u každého souboru uvést verzi, kterou používáte. V opačném případě se 
 předpokládá verze 1. Pro běžné aplikace je vhodné používat verzi mimimálně 2 a vyšší.
 
