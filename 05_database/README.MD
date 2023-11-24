@@ -49,13 +49,13 @@ volumes:
 
 Nyní můžeme databázi ovládat z příkazové řádky
 
-| Příkaz                                      | Vysvětlení                                       |
-|---------------------------------------------|--------------------------------------------------|
-| psql -Uadmin -d test                        | Přihlášení do databáze test pod uživatelem admin |
-| SELECT datname FROM pg_catalog.pg_database; | Výpis databází. Případně lze zadat \l            |
-| create table test (a int);                  | Vytvoření tabulky                                |
-| insert into test values(1);                 | Vložení řádku do tabulky                         | 
-| select * from test;                         | Výpis tabulky                                    |
+| Příkaz                                                                                                                                                                                                 | Vysvětlení                                       |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------|
+| psql -Uadmin -d test                                                                                                                                                                                   | Přihlášení do databáze test pod uživatelem admin |
+| SELECT datname FROM pg_catalog.pg_database;                                                                                                                                                            | Výpis databází. Případně lze zadat \l            |
+| create table images (id int, image_url varchar(1024));                                                                                                                                                 | Vytvoření tabulky                                |
+| insert into images values(1, 'https://images.unsplash.com/photo-1533450718592-29d45635f0a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8anBnfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60'); | Vložení řádku do tabulky                         | 
+| select * from images;                                                                                                                                                                                  | Výpis tabulky                                    |
 
 Vyzkoušíme si i webový přístup. V prohlížeči otevřete URL http://localhost:8080
 
