@@ -10,10 +10,6 @@
 		margin: 100px;
 		text-align: center;
 	}
-	.tenor-gif-embed {
-		width: 400px !important;
-		margin: 0 auto;
-	}
 </style>
 </head>
 <body>
