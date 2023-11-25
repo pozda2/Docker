@@ -16,8 +16,8 @@ class Image(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     image_url = db.Column(db.String(1024), nullable=False)
 
-    def __init__(self, url_image):
-        self.image_url = url_image
+    def __init__(self, image_url):
+        self.image_url = image_url
 
 
 @app.route("/")
