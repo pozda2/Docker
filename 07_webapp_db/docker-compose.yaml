@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  web:
+    container_name: web
+    build: ./services/web
+    command:
+      python manage.py run -h 0.0.0.0
+    volumes:
+      - ./services/web/:/usr/src/app/
+    ports:
+      - "8005:5000"
+    env_file:
+      - .environment
+    depends_on:
+      - database
+
+  database:
+    container_name: database
+    restart: always
+    image: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - .environment
+
+  adminer:
+      container_name: adminer
+      image: adminer
+      restart: always
+      ports:
+          - "8080:8080"
+      depends_on:
+          - database
+
+volumes:
+  postgres_data:
