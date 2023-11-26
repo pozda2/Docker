@@ -28,7 +28,7 @@ Předpis pro vytvoření image je uložený v souboru Dockerfile
 ### Container
 
 Kontejner je konkrétní běhové prostředí aplikace vytvořené na základě nějakého image. Sdílí jádro operačního systému 
-s ostatními kontejnery. Z jednoho image můžeme vyvořit více kontejnerů, které poběží souběžně vedle sebe.
+s ostatními kontejnery. Z jednoho image můžeme vytvořit více kontejnerů, které poběží souběžně vedle sebe.
 
 | Příkaz                               | Vysvětlení                      |
 |--------------------------------------|---------------------------------|
@@ -54,7 +54,7 @@ si postupně ukážeme.
 | ADD        | Podobně jako COPY, ale navíc například rozbalí zabalený soubor se zdrojáky. tar.gz apod.                                                                                                     |
 | WORKDIR    | Změna adresáře                                                                                                                                                                               |
 | VOLUME     | Připojení disku pro zápis. Viz dále                                                                                                                                                          |
-| USER       | Spouštění pod jiným uživatelem než je root                                                                                                                                                   |
+| USER       | Spouštění pod jiným uživatelem, než je root                                                                                                                                                   |
 | ENV        | Nastavení systémové proměnné                                                                                                                                                                 |
 | EXPOSE | Propagace vnitřních portů v kontejneru navenek |
 | ENTRYPOINT | Příkaz, který spouští aplikaci                                                                                                                                                               |
@@ -71,7 +71,7 @@ si postupně ukážeme.
 
 | Příkaz                                                              | Vysvětlení                                                                                                                                                |
 |---------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| docker build -t my-hello-world .                                    | Vytvořebí image my-hello-world podle Dockerfile                                                                                                           |
+| docker build -t my-hello-world .                                    | Vytvoření image my-hello-world podle Dockerfile                                                                                                           |
 | docker image ls                                                     | Vypsání seznamu images                                                                                                                                    |
 | docker run -d -p 8000:80 --name my-hello-world-app-c my-hello-world | Vytvoření kontejneru z image. Kontejner se spustí a vnitřní port apache 80 je z venku dostupný na 8080. V prohlížeči zadejte adresu http://localhost:8000 |
 | docker ps                                                           | výpis kontejneru                                                                                                                                          |
