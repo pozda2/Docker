@@ -91,7 +91,7 @@ Pak se vybere náhodný záznam v seznamu, který se zobrazí.
 | http://localhost:8080/?pgsql=database&username=admin&db=test&ns=public&select=images | Přes adminer lze zkontrolovat, že tabulka images vytvořená a naplněná |
 | http://localhost:8005/                                                               | Zobrazení náhodného obrázku                                           |
 | docker compose down                                                                  | Vypnutí aplikace                                                      |
-| DB_INIT=0                                                                            | V souboru .environment vyplněte inicializaci databáze                 |
+| DB_INIT=0                                                                            | V souboru .environment vyplňte inicializaci databáze                  |
 | docker compose up -d                                                                 | Zapnutí aplikace                                                      |
  
 

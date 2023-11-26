@@ -6,7 +6,7 @@ V této kapitole začneme psát jednoduchou aplikaci v python framework Flask
 
 Samotná aplikace se jmenuje app.py. Na začátku je definován list 4 URL odkazů na obrázky.
 
-@app.route('/') dekorátor je uveden před funkcí index(), a říká, že se pouštěš, pokud bude URL /
+@app.route('/') dekorátor je uveden před funkcí index(), a říká, že se pouští, pokud bude URL /
 
 Funkce index() vygeneruje náhodné url ze seznamu a zavolá funkci render_template, které je předáno url náhodného obrázku 
 a soubor index.html v templates.

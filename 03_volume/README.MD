@@ -8,11 +8,11 @@ Pokud aplikace potřebuje někam trvale zapisovat data, musíme ji připojit zap
 Ukážeme si to na databázi PostgreSQL.
 
 
-| Příkaz                                                                         | Vysvětlení                                                                    |
-|--------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-| docker pull postgres                                                           | Stáhnutí oficálního image s poslední verzí postgreSQL                         |
-| docker run --name postgresdb -e POSTGRES_PASSWORD=mysecretpassword -d postgres | Vytvoření kontejneru. Databáze potřebuje nastavit root heslo pomocí promměné POSTGRES_PASSWORD |
-| docker container inspect postgres | Image postres měl v sobě definovaný nepojmenovaný volume. Přesnou definici můžeme zobrazit pomocí inspect | 
+| Příkaz                                                                         | Vysvětlení                                                                                                 |
+|--------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| docker pull postgres                                                           | Stáhnutí oficiálního image s poslední verzí postgreSQL                                                     |
+| docker run --name postgresdb -e POSTGRES_PASSWORD=mysecretpassword -d postgres | Vytvoření kontejneru. Databáze potřebuje nastavit root heslo pomocí promměné POSTGRES_PASSWORD             |
+| docker container inspect postgres | Image postgres měl v sobě definovaný nepojmenovaný volume. Přesnou definici můžeme zobrazit pomocí inspect | 
 
 Ve výpisu hledáme sekci Mounts. Zde je vidět, že volume f33a231365088ce230e61472a9b4b00d88c016fe2b15e24cc25e3c9274ae6b57 se připojil /var/lib/postgresql/data 
 ```
@@ -33,7 +33,7 @@ Ve výpisu hledáme sekci Mounts. Zde je vidět, že volume f33a231365088ce230e6
 |--------------------------------------------------------------------------------|---------------|
 | docker volume ls                                                               | Výpis volumes |
 
- Volume vydrží zastavení i smazání kontejneru. O data nepříjdeme.
+ Volume vydrží zastavení i smazání kontejneru. O data nepřijdeme.
 
 | Příkaz                 | Vysvětlení                    |
 |------------------------|-------------------------------|
@@ -48,5 +48,5 @@ Ve výpisu hledáme sekci Mounts. Zde je vidět, že volume f33a231365088ce230e6
 | Příkaz                                                                                                               | Vysvětlení                                                                                     |
 |----------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
 | docker run --name postgresdb -e POSTGRES_PASSWORD=mysecretpassword - postresdb:/var/lib/postgresql/data -d postgres  | Vytvoří kontejner s pojmenovaným volume                                                        |
-| docker volume ls                                                                                                     | Vytvoření kontejneru. Databáze potřebuje nastavit root heslo pomocí promměné POSTGRES_PASSWORD |
-| docker logs postgresdb                                                                                               | Zobrazení logu kontejneru. Pomůže při zjišťování chyb | 
+| docker volume ls                                                                                                     | Vytvoření kontejneru. Databáze potřebuje nastavit root heslo pomocí proměnné POSTGRES_PASSWORD |
+| docker logs postgresdb                                                                                               | Zobrazení logu kontejneru. Pomůže při zjišťování chyb                                          | 

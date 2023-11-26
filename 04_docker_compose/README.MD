@@ -1,10 +1,10 @@
 # Docker compose
 
-Vytváření kontajnerů pomocí Dockerfile je vhodné převážně pro jednokontejnerová aplikace. 
+Vytváření kontejnerů pomocí Dockerfile je vhodné převážně pro jedno kontejnerová aplikace. 
 Ve chvíli, kdy chceme vytvořit multi kontejnerovou aplikace, například webovou aplikaci s databázovým serverem, 
 tak by vytváření dosavadní způsobem bylo komplikované.
 
-Proto vznikl nástroj docker-compose, který v posledních verzích je intergrovaný do samotného dockeru.
+Proto vznikl nástroj docker-compose, který v posledních verzích je integrovaný do samotného dockeru.
 
 Popis aplikace a její rozdělení se definuje pomocí textového souboru docker-compose.yml
 
@@ -15,7 +15,7 @@ V této kapitole si pro jednoduchost vytvoříme jedno kontejnerovou aplikaci se
 
 ## docker-compose.yaml
 Syntaxe souboru prochází vývojem a je vhodné u každého souboru uvést verzi, kterou používáte. V opačném případě se 
-předpokládá verze 1. Pro běžné aplikace je vhodné používat verzi mimimálně 2 a vyšší.
+předpokládá verze 1. Pro běžné aplikace je vhodné používat verzi minimálně 2 a vyšší.
 
 
 ```
@@ -31,7 +31,7 @@ services:
     ports: # mapovaní portů 
     volumes: # argument -v, anebo i COPY instrukce (nepovinné)
     environment: # argument -e, environment proměnné (nepovinné)
-    command: # definované příkazy po spustení kontajneru (přepisuje ty v image)(nepovinné)
+    command: # definované příkazy po spustení kontejneru (přepisuje ty v image)(nepovinné)
   
   service_2: # další kontejner
   

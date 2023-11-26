@@ -4,10 +4,10 @@ V této kapitole si pomocí docker compose vytvoříme databázi postresql. Zár
 správu pomocí webového prostředí.
 
 ## docker-compose.yaml
-První kontejner se bude jmenovat database a vytvoříme ho z image postres. V sekci environment si definujeme heslo (to je povinné) 
+První kontejner se bude jmenovat database a vytvoříme ho z image postgres. V sekci environment si definujeme heslo (to je povinné) 
 a případně jméno administrátora. Můžeme si rovnou i vytvořit databázi.
 
-Aby nám databáze přežila restart, tak si vytvoříme volume db-data. Ten napapujeme do /var/lib/postresql/data
+Aby nám databáze přežila restart, tak si vytvoříme volume db-data. Ten namapujeme do /var/lib/postresql/data
 
 Druhý kontejner bude obsahovat aplikaci adminer, která bude poslouchat na portu 8080.
 

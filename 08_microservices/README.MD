@@ -1,5 +1,5 @@
 # Microservices
-V této kapitole aplikaci předěláme do architektury microservices. Uživatelské rozhraní a logioku aplikace oddělíme do samostatných služeb.
+V této kapitole aplikaci předěláme do architektury microservices. Uživatelské rozhraní a logiku aplikace oddělíme do samostatných služeb.
 Část aplikace, která pracovala s databází umístíme do služby images. Uživatelské rozhraní umístíme do služby ui. 
 Ale neměl by být problém vytvořit například mobilní aplikaci, která bude používat služeb služby images.
 
@@ -131,7 +131,7 @@ Ve stručnosti si ukažme princip komunikace mezi službami na zobrazení náhod
 * Uživatel v UI chce zobrazit stránku, která má zobrazit náhodný obrázek. Zavolá se funkce index()
 * Nejprve se přes knihovnu urllib zavolá metodou GET API rozhraní služby images http://images:5000/api/images
 * Služba images převezme požadavek a pokusí se přečíst z databáze seznam všech obrázků
-* Ze všech vrácených řádků z databáze poskladá platný JSON dokument, který odešle službě UI
+* Ze všech vrácených řádků z databáze poskládá platný JSON dokument, který odešle službě UI
 * Služba UI přijme textový řetězec, který se pokusí převést na JSON dokument
 * Pokud se to podaří, ze seznamu vybere náhodný obrázek
 * Náhodný obrázek pošle spolu se vzorem index.html pro vyrenderování. 
