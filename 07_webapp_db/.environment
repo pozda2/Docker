@@ -1,6 +1,6 @@
 FLASK_APP=app/__init__.py
 FLASK_DEBUG=1
-DB_INIT=0
+DB_INIT=1
 
 DATABASE=postgres
 POSTGRES_HOST=database
