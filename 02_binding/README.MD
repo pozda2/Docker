@@ -1,7 +1,7 @@
 # Bind mounting
 
 V minulé kapitole jsme vytvořili image s pevnou HTML stránkou. Pokud při ladění aplikace zjistíme chybu a opravíme ji, 
-tak budeme muset provést prebuild image, smazání a znovu vytvoření kontejneru, abychom opravu chyby mohli vyzkoušet.
+tak budeme muset provést rebuild image, smazání a znovu vytvoření kontejneru, abychom opravu chyby mohli vyzkoušet.
 
 Tento způsob vývoje aplikace bude velmi neefektivní.
 
