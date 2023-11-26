@@ -1,11 +1,11 @@
 # Úvod do docker
-V rámci tohoto projektu si postupně ukážeme postupy, jak vytvořit konteinerizovanou aplikaci.
+V rámci tohoto projektu si postupně ukážeme postupy, jak vytvořit kontejnerizovanou aplikaci.
 
 Aplikace bude napsaná v Python3 za použití frameworku Flask. Pro pochopení principu dockeru není třeba tyto technologie ovládat.
 
-Projekt předpokládá, že máte na počítači nainstalovaný Docker. Na linuxu, lze nainstalovat přes repozitáře. Na windows si stáhněte Docker Desktop a postupujte podle návodu.
+Projekt předpokládá, že máte na počítači nainstalovaný Docker. Na linuxu, lze nainstalovat přes repozitáře. Na Windows si stáhněte Docker Desktop a postupujte podle návodu.
 
-Vytvářet multikonejnerovou aplikaci budeme postupně. Jednotlivé fáze jsou umístěny do očíslovaných adresářů.
+Vytvářet multikontejnerovou aplikaci budeme postupně. Jednotlivé fáze jsou umístěny do očíslovaných adresářů.
 
 ## Instalace docker na Linuxu
 
