@@ -1,0 +1,63 @@
+version: '3.8'
+
+services:
+  ui:
+    container_name: ui
+    build: ./services/ui
+    command:
+      python manage.py run -h 0.0.0.0
+    volumes:
+      - ./services/ui/:/usr/src/app/
+    ports:
+      - "8006:5000"
+    depends_on:
+      - images
+    env_file:
+      - .environment
+    networks:
+      - frontnet
+
+  images:
+    container_name: images
+    build: ./services/images
+    command:
+      python manage.py run -h 0.0.0.0
+    volumes:
+      - ./services/images/:/usr/src/app/
+    env_file:
+      - .environment
+    depends_on:
+      - database
+    networks:
+      - backnet
+      - frontnet
+
+  database:
+    container_name: database
+    restart: always
+    image: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - .environment
+    networks:
+      - backnet
+
+  adminer:
+      container_name: adminer
+      image: adminer
+      restart: always
+      depends_on:
+          - database
+      ports:
+        - "8080:8080"
+      networks:
+        - frontnet
+        - backnet
+
+volumes:
+  postgres_data:
+
+networks:
+  frontnet:
+  backnet:

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+{% include ['header.jinja'] %}
+
+  <body>
+    <div class="menu">
+      <ul>
+      <li><A href="/">Random image</A><li>
+      <li><A class="active" href="/admin">Admin</A></li>
+      </ul>
+    </div>
+    <div class="container">
+        <h4>Add new image</h4>
+            {% include ['new_image.jinja'] %}
+        <h4>Manage images</h4>
+
+            <table id="table" class="table-dark table-striped" data-toggle="table" data-escape="false" data-filter-control="true" data-click-to-select="true">
+            <thead>
+                <tr>
+                    <th data-field="id" data-sortable="true">ID</th>
+                    <th data-field="image_url" data-sortable="true">URL</th>
+                    <th >Preview</th>
+                    <th >Action</th>
+                </tr>
+            </thead>
+            <tbody>
+            {%- if images -%}
+                {%- for image in images -%}
+                <tr>
+                    <td>{{image.id}}</td>
+                    <td>{{image.image_url}}</td>
+                    <td><img src="{{image.image_url}}" width="100" height="100"></td>
+                    <td> <a href="/admin/edit/{{image.id}}">Edit</a> <a href="/admin/delete/{{image.id}}">Delete</a></td>
+                </tr>
+                {%- endfor -%}
+            {%- endif -%}
+            </tbody>
+            </table>
+    </div>
+  </body>
+</html>
+
