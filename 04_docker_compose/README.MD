@@ -47,5 +47,6 @@ networks:
 |------------------------------|---------------------------------------------------------------------|
 | docker compose up --build -d | Při změně Dockerfile se spustí build                                |  
 | docker compose up            | Build, vytvoření kontejnerů a jejich spuštění                       |
+| http://localhost:8002        | Ověření aplikace a pak vypnutí přes CTRL+C                          |  
 | docker compose down          | Vypnutí kontejnerů a jejich smazání (volumes a networks se nemažou) |
 | docker compose up -d         | Spuštění kontejneru na pozadí                                       |

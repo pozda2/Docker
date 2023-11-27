@@ -24,6 +24,9 @@ Jeho spuštění je v souboru gunicorn.sh V něm ji vidět, že aplikace poběž
 
 gunicorn.sh je ENTRYPOINT v Dockerfile
 
-##
-docker compose up 
+| Příkaz                  | Vysvětlení                      |
+|-------------------------|---------------------------------|
+| docker compose up -d    | Vytvoření a spuštění kontejnerů |
+| http://localhost:8004   | Ověření aplikace                | 
+| docker compose down     | Vypnutí kontejnerů              |
 

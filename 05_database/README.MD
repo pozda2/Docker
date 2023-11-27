@@ -41,7 +41,6 @@ volumes:
 
 | Příkaz                               | Vysvětlení                            |
 |--------------------------------------|---------------------------------------|
-| cd docker-conf                       | Přepnutí do adresáře docker-conf      |
 | docker compose up -d                 | Vytvoření a spuštění kontejnerů       |
 | docker ps                            | Výpis spuštěných kontejnerů           |
 | docker volume list                   | Výpis volumes                         |
@@ -56,9 +55,14 @@ Nyní můžeme databázi ovládat z příkazové řádky
 | create table images (id int, image_url varchar(1024));                                                                                                                                                 | Vytvoření tabulky                                |
 | insert into images values(1, 'https://images.unsplash.com/photo-1533450718592-29d45635f0a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8anBnfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60'); | Vložení řádku do tabulky                         | 
 | select * from images;                                                                                                                                                                                  | Výpis tabulky                                    |
+| CTRL+d pak CTRL+C                                                                                                                                                                                      | Vypnutí psql a pak odpojení od bash              |
 
 Vyzkoušíme si i webový přístup. V prohlížeči otevřete URL http://localhost:8080
 
 Zvolte typ databáze postreSQL, server je database, uživatel admin, heslo mysecretpassword a databáze test.
 
 Měli byste být přihlášeni k databázi, kterou teď můžete administrovat.
+
+| Příkaz                             | Vysvětlení       |
+|------------------------------------|------------------|
+| docker compose down                | Vypnutí aplikace | 

@@ -47,6 +47,6 @@ Ve výpisu hledáme sekci Mounts. Zde je vidět, že volume f33a231365088ce230e6
 
 | Příkaz                                                                                                               | Vysvětlení                                                                                     |
 |----------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
-| docker run --name postgresdb -e POSTGRES_PASSWORD=mysecretpassword - postresdb:/var/lib/postgresql/data -d postgres  | Vytvoří kontejner s pojmenovaným volume                                                        |
+| docker run --name postgresdb -e POSTGRES_PASSWORD=mysecretpassword -v postresdb:/var/lib/postgresql/data -d postgres | Vytvoří kontejner s pojmenovaným volume                                                        |
 | docker volume ls                                                                                                     | Vytvoření kontejneru. Databáze potřebuje nastavit root heslo pomocí proměnné POSTGRES_PASSWORD |
 | docker logs postgresdb                                                                                               | Zobrazení logu kontejneru. Pomůže při zjišťování chyb                                          | 
