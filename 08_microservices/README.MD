@@ -168,3 +168,13 @@ def get_images():
         print(f"The error '{e}' occurred.")
         return jsonify({"error": "An error occurred while getting all images."}), 500
 ```
+
+## Spuštění
+| Příkaz                                                                               | Popis                                                                 |
+|--------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
+| docker compose up -d                                                                 | Build a start aplikace                                                |
+| http://localhost:8080/?pgsql=database&username=admin&db=test&ns=public&select=images | Přes adminer lze zkontrolovat, že tabulka images vytvořená a naplněná |
+| http://localhost:8006/                                                               | Zobrazení náhodného obrázku                                           |
+| docker compose down                                                                  | Vypnutí aplikace                                                      |
+| DB_INIT=0                                                                            | V souboru .environment vyplňte inicializaci databáze                  |
+| docker compose up -d                                                                 
