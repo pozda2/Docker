@@ -12,7 +12,7 @@ Ukážeme si to na databázi PostgreSQL.
 |--------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
 | docker pull postgres                                                           | Stáhnutí oficiálního image s poslední verzí postgreSQL                                                     |
 | docker run --name postgresdb -e POSTGRES_PASSWORD=mysecretpassword -d postgres | Vytvoření kontejneru. Databáze potřebuje nastavit root heslo pomocí promměné POSTGRES_PASSWORD             |
-| docker container inspect postgres | Image postgres měl v sobě definovaný nepojmenovaný volume. Přesnou definici můžeme zobrazit pomocí inspect | 
+| docker container inspect postgresdb | Image postgres měl v sobě definovaný nepojmenovaný volume. Přesnou definici můžeme zobrazit pomocí inspect | 
 
 Ve výpisu hledáme sekci Mounts. Zde je vidět, že volume f33a231365088ce230e61472a9b4b00d88c016fe2b15e24cc25e3c9274ae6b57 se připojil /var/lib/postgresql/data 
 ```
