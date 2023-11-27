@@ -17,8 +17,8 @@ COPY . /usr/src/app/
 # install dependencies
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
-RUN chmod u+x /usr/src/app/entrypoint.sh
+RUN chmod a+x /usr/src/app/entrypoint.sh
 
 EXPOSE 5000
 
-ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
+ENTRYPOINT ["/bin/sh","/usr/src/app/entrypoint.sh"]
