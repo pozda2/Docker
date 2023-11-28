@@ -1,0 +1,9 @@
+<form action="/admin/add_image" method="post">
+    {{ form.csrf_token }}
+
+    <div class="row">
+      {{ form.image_url(class="form-control", id="image_url", placeholder= "Image URL (required)" ) }}
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add new image</button>
+</form>

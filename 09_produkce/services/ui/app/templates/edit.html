@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+{% include ['header.jinja'] %}
+
+  <body>
+    <div class="menu">
+      <ul>
+      <li><A href="/">Random image</A><li>
+      <li><A class="active" href="/admin">Admin</A></li>
+      </ul>
+    </div>
+    <div class="container">
+        <h4>Edit image</h4>
+            {% include ['edit_image.jinja'] %}
+    </div>
+  </body>
+</html>

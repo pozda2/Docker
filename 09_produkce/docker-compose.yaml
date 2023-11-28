@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  ui:
+    container_name: ui
+    build: ./services/ui
+    command:
+      gunicorn --bind 0.0.0.0:5000 manage:app
+    volumes:
+      - static_volume:/home/app/web/app/static
+    expose:
+      - 5000
+    depends_on:
+      - images
+    env_file:
+      - .environment
+    networks:
+      - backnet
+
+  images:
+    container_name: images
+    build: ./services/images
+    command:
+      gunicorn --bind 0.0.0.0:5000 manage:app
+    expose:
+      - 5000
+    env_file:
+      - .environment
+    depends_on:
+      - database
+    networks:
+      - backnet
+
+  database:
+    container_name: database
+    restart: always
+    image: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - .environment
+    networks:
+      - backnet
+
+  nginx:
+    container_name: nginx
+    build: ./services/nginx
+    ports:
+      - "8100:80"
+    depends_on:
+      - ui
+    volumes:
+      - static_volume:/home/app/web/app/static
+    networks:
+      - frontnet
+      - backnet
+
+volumes:
+  postgres_data:
+  static_volume:
+
+networks:
+  frontnet:
+  backnet:
