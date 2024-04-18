@@ -19,11 +19,11 @@ zpětně do registru nahrát.
 
 Předpis pro vytvoření image je uložený v souboru Dockerfile
 
-| Příkaz | Vysvětlení |
-|--------| ---------- |
-| docker pull alpine                  | stáhnutí oficiální image se základním verzí linuxu |
-| docker image ls                     | zobrazení seznamu images |
-| docker image id                     | smazání nepotřebného image | 
+| Příkaz             | Vysvětlení                                         |
+|--------------------|----------------------------------------------------|
+| docker pull alpine | stáhnutí oficiální image se základním verzí linuxu |
+| docker image ls    | zobrazení seznamu images                           |
+| docker image rm id | smazání nepotřebného image                         | 
 
 ### Container
 
@@ -54,9 +54,9 @@ si postupně ukážeme.
 | ADD        | Podobně jako COPY, ale navíc například rozbalí zabalený soubor se zdrojáky. tar.gz apod.                                                                                                     |
 | WORKDIR    | Změna adresáře                                                                                                                                                                               |
 | VOLUME     | Připojení disku pro zápis. Viz dále                                                                                                                                                          |
-| USER       | Spouštění pod jiným uživatelem, než je root                                                                                                                                                   |
+| USER       | Spouštění pod jiným uživatelem, než je root                                                                                                                                                  |
 | ENV        | Nastavení systémové proměnné                                                                                                                                                                 |
-| EXPOSE | Propagace vnitřních portů v kontejneru navenek |
+| EXPOSE     | Propagace vnitřních portů v kontejneru navenek                                                                                                                                               |
 | ENTRYPOINT | Příkaz, který spouští aplikaci                                                                                                                                                               |
 
 
