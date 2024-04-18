@@ -11,11 +11,17 @@ ale velmi urychlí vývoj.
 
 Stále můžeme využít předchozí Dockerfile, pouze při vytváření kontejneru povolíme binding. 
 
-| Příkaz                                                                                           | Vysvětlení                                                                                                                                                |
-|--------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| docker run -d --name my-hello-world-c2 -p 8001:80 -v $(pwd)/webroot:/var/www/html my-hello-world | Syntaxe pro linux a mac os.  Parametr -v říká, že adresář $(pwd)/webroot bude přemontován přes obsah adresáře /var/www/html                               |
-| docker run -d --name my-hello-world-c2 -p 8001:80 -v %cd%/webroot:/var/www/html my-hello-world   | Pro Windows pouze zaměníme linuxový příkaz pro zjistění aktuální adresáře pwd za windows příkaz cd | 
+| Příkaz                                                                                               | Vysvětlení                                                                                                                                                |
+|------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| docker run -d --name my-hello-world-app-c2 -p 8001:80 -v $(pwd)/webroot:/var/www/html my-hello-world | Syntaxe pro linux a mac os.  Parametr -v říká, že adresář $(pwd)/webroot bude přemontován přes obsah adresáře /var/www/html                               |
+| docker run -d --name my-hello-world-app-c2 -p 8001:80 -v %cd%/webroot:/var/www/html my-hello-world   | Pro Windows pouze zaměníme linuxový příkaz pro zjistění aktuální adresáře pwd za windows příkaz cd | 
 
 * Připojte se v prohlížeči na url http://localhost:8001/
 * Upravte v souboru webroot/index.html Hello world na Ahoj svete
 * Obnovte v prohlížeči stránku http://localhost:8001/
+
+| Příkaz                            | Vysvětlení                                                                                                                                                |
+|-----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| docker stop my-hello-world-app-c2 | Vypnutí kontejneru                                                                                                                                        |
+| docker rm my-hello-world-app-c2   | Smazání kontejneru                                                                                                                                        |
+
